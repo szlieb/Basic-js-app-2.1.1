@@ -1,7 +1,11 @@
-/* Here is a basic alert JS pop up and an example of multi line comment
-alert ('Hello World');8
-*/
 
+alert ('Hello World');
+
+let favoriteFood = 'Shawarma with copious amounts of Harissa';
+document.write(favoriteFood);
+
+
+/*
 //Here is an example of a variable overwirting a prev one and a 1 line comment.
 let myName = 'Bob';
 document.write(myName);
@@ -20,4 +24,5 @@ let doubleSize = size * 2;
 document.write(doubleSize);
 let minSize = (doubleSize * 2) - (size / 2);
 document.write(minSize);
+*/
 
