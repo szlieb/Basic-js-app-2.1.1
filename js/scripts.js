@@ -1,10 +1,14 @@
+let pokemonList = [
+    { name: "Charmeleon", height: "1", type: ["grass","water", "speed"] },
+    { name: "Spearow", height: "3", type: "water" },
+    { name: "Sandslash", height: "2", type: "speed" },
+];
 
-alert ('Hello World');
-
-let favoriteFood = 'Shawarma with copious amounts of Harissa';
-document.write(favoriteFood);
 
 
+
+/*leavin gthis here for a placeholder ofr now will remove when i have time to add these to my personal notes */
+/*let pokemon1 = {name:"Charmeleon", height:"1.1 m", type:"grass" };*/
 /*
 //Here is an example of a variable overwirting a prev one and a 1 line comment.
 let myName = 'Bob';
