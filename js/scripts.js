@@ -4,6 +4,8 @@ let pokemonList = [
     { name: "Sandslash", height: "2", type: "speed" },
 ];
 
+pokemonList.forEach ( item => console.log (item))
+
 //the "for" will start the loop, the "let i=0" will set loop to start from "0". The pokemonList.length will go through the length of my PokemonList
 
 for (let i = 0; i < pokemonList.length; i++) {
