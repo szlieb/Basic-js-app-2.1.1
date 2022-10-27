@@ -40,17 +40,18 @@ let pokemonRepository=(function () {
         let listpokemon=document.createElement("li");
         //creates buttons out of the UL list
         let button=document.createElement("button");
-        // should i add the event listner here ?  addPokemonListener(button, pokemon);
+        // EVent listner
+        addPokemonListener(button, pokemon);
         // pass in the pokemon names in the inner text of the button
         button.innerText=pokemon.name;
-        /*DO  I PUT THE CSS LINK HERE? is this correct for the css linking line 47?*/
+        /*Link button class to my CSS*/
         button.classList.add("button-class"); 
         //pass the li into the button on the webpage
         listpokemon.appendChild(button);
         pokemonList.appendChild(listpokemon);
     }
 
-   // creating this function to be used later on Is this the correct way to add event listner? see line 43 
+   // Event Listner functoin ot be sued later on.  
     function addPokemonListener (button, pokemon) {
         button.addEventListener('click', function() {
                 showDetails(pokemon);
