@@ -13,7 +13,7 @@ let pokemonRepository=(function () {
         name: "Sandslash", height: 2, types: ["speed"],
     }
 
-    ,
+    
     ];
 
     // Creating the function to set loop of if's
