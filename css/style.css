@@ -11,3 +11,21 @@
     cursor: pointer;
     margin: 10px;
 }
+#loading {
+    FONT-SIZE: 100px;
+    position: fixed;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    animation: blinker 1s linear infinite;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+}
+.loading-show{
+   display: block; 
+}
+.loading-hide{
+   display: none; 
+}
