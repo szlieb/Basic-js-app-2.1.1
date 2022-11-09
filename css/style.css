@@ -1,43 +1,9 @@
-/*.button-class {
-    background-color: rgb(255, 127, 219);
-    border: none;
-    color: black;
-    padding: 18px;
-    text-align: center;
-    text-emphasis: none;
-    display: inline-block;
-    font-size: 22px;
-    transition-duration: 0.5s;
-    cursor: pointer;
-    margin: 10px;
-}
-#loading {
-    FONT-SIZE: 100px;
-    position: fixed;
-    background-color: black;
-    color: white;
-    text-transform: uppercase;
-    text-align: center;
-    animation: blinker 1s linear infinite;
-    opacity: 0.5;
-    height: 100%;
-    width: 100%;
-
-}
-.loading-show{
-   display: block; 
-}
-.loading-hide{
-   display: none; 
-}*/
-
 * {
     box-sizing: border-box;
-
 }
 
 body {
-    background-color:rgb(238, 118, 182);
+    background-color: rgb(249, 61, 61);
     text-align: center;
 }
 
@@ -51,9 +17,9 @@ body {
 }
 
 button {
-    background-color: rgb(222, 230, 219);
-    color: black;
-    font-size:x-large;
+    background-color: rgba(0, 0, 0, 0.942);
+    color: rgb(255, 255, 255);
+    font-size: x-large;
     border: none;
     border-bottom: 5px solid rgba(0, 0, 0, 0.5);
     width: 25%;
@@ -72,14 +38,14 @@ button:hover {
 
 ul {
     display: block;
-    list-style-type: none;  
+    list-style-type: none;
 }
 
 #modal-container {
     display: none;
 }
 
-.modal.close{
+.modal.close {
     float: right;
     border: 0;
     background-color: none;
@@ -103,26 +69,23 @@ ul {
 }
 
 #modal-container h1 {
-text-transform: capitalize;    
-text-align: center;
-font-size: x-large;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: x-large;
 }
 
 #modal-container p {
-   text-transform: capitalize;
-
+    text-transform: capitalize;
 }
 
 .modal {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
-    background-color: aqua;
+    background-color: rgb(246, 246, 246);
     padding: 15px;
     width: 100%;
     max-width: 700px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
 }
-
-
