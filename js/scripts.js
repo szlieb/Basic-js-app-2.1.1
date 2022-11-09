@@ -41,10 +41,10 @@ let pokemonRepository = (function() {
         return pokemonList;
     }
     //modal
-    (function() {
+   
         let modalContainer = document.querySelector('#modal-container');
 
-        function showModal(title, text) {
+        function showModal(pokemon) {
             modalContainer.innerHTML = '';
             let modal = document.createElement('div');
             modal.classList.add('modal');
@@ -133,7 +133,7 @@ let pokemonRepository = (function() {
                 hideLoader();
             }).catch(function(e) {
                 hideLoader();
-                console.error(e);
+                //console.error(e);
             });
         }
         // api returns "url" as the name of the details url. so will change it to be "detailsUrl" as requested in the course notes.
@@ -191,7 +191,7 @@ let pokemonRepository = (function() {
             //Return the new list items
             addListItem: addListItem,
             loadList: loadList,
-            loadDetail: loadDetail,
+           
             showDetails: showDetails
         };
     })();
@@ -201,4 +201,3 @@ let pokemonRepository = (function() {
             pokemonRepository.addListItem(pokemon);
         });
     });
-})
