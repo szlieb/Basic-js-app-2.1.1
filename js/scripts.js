@@ -31,7 +31,7 @@ var pokemonRepository = (function () {
                 "<h4 class='card-title' >" + pokemon.name + "</h4>"
             );
             var $seeProfile = $(
-                '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">See Profile</button>'
+                '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">View Profile</button>'
             );
 
             $list.append($card);
