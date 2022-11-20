@@ -2,16 +2,16 @@ var pokemonRepository = (function () {
     // this will store all our pokmon items
     var repository = [];
     // this saves the api url to get the LIST of pokemon items to a variable
-    var apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+    var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
     function add(pokemon) {
         if (
-            typeof pokemon === "object" &&
-            "name" in pokemon &&
-            "detailsUrl" in pokemon
+            typeof pokemon === 'object' &&
+            'name' in pokemon &&
+            'detailsUrl' in pokemon
         ) {
             repository.push(pokemon);
         } else {
-            console.log("add an object");
+            console.log('add an object');
         }
     }
     function getAll() {
@@ -19,16 +19,16 @@ var pokemonRepository = (function () {
     }
     function addListItem(pokemon) {
         pokemonRepository.loadDetails(pokemon).then(function () {
-            var $list = $(".list");
+            var $list = $('.list');
 
             var $card = $('<div class="card" style="width:200px"></div>');
             var $image = $(
-                '<img class="card-img-top" alt="Card image" style="width:50%" />'
+                '<img class="card-img-top" alt= "Card image" style="width:50%" />'
             );
-            $image.attr("src", pokemon.imageUrlFront);
+            $image.attr('src', pokemon.imageUrlFront);
             var $cardBody = $('<div class="card-body"></div>');
             var $cardTitle = $(
-                "<h4 class='card-title' >" + pokemon.name + "</h4>"
+                '<h4 class="card-title" >' + pokemon.name + '</h4>'
             );
             var $seeProfile = $(
                 '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">View Profile</button>'
@@ -41,7 +41,7 @@ var pokemonRepository = (function () {
             $cardBody.append($cardTitle);
             $cardBody.append($seeProfile);
 
-            $seeProfile.on("click", function (event) {
+            $seeProfile.on('click', function () {
                 showDetails(pokemon);
             });
         });
@@ -79,13 +79,13 @@ var pokemonRepository = (function () {
                 item.height = details.height;
                 // loop each ofthe pokemon types
                 item.types = [];
-                for (var i = 0; i < details.types.length; i++) {
+                for (let i = 0; i < details.types.length; i++) {
                     item.types.push(details.types[i].type.name);
                 }
 
                 // loop to get abilities of a selected pokemon
                 item.abilities = [];
-                for (var i = 0; i < details.abilities.length; i++) {
+                for (let i = 0; i < details.abilities.length; i++) {
                     item.abilities.push(details.abilities[i].ability.name);
                 }
 
@@ -97,28 +97,28 @@ var pokemonRepository = (function () {
     }
     // show the modal content
     function showModal(item) {
-        let modalBody = $(".modal-body");
-        let modalTitle = $(".modal-title");
-        let modalHeader = $(".modal-header");
+        let modalBody = $('.modal-body');
+        let modalTitle = $('.modal-title');
+        
         modalTitle.empty();
         modalBody.empty();
 
         // creating element for name in modal
-        let nameElement = $("<h1>" + item.name + "</h1>");
+        let nameElement = $('<h1>' + item.name + '</h1>');
         // creating img in modal
         let imageElementFront = $('<img class="modal-img" style="width:50%">');
-        imageElementFront.attr("src", item.imageUrlFront);
+        imageElementFront.attr('src', item.imageUrlFront);
         let imageElementBack = $('<img class="modal-img" style="width:50%">');
-        imageElementBack.attr("src", item.imageUrlBack);
+        imageElementBack.attr('src', item.imageUrlBack);
         // creating element for height in modal
-        let heightElement = $("<p>" + "height : " + item.height + "</p>");
+        let heightElement = $('<p>' + 'height : ' + item.height + '</p>');
         // creating element for weight in modal
-        let weightElement = $("<p>" + "weight : " + item.weight + "</p>");
+        let weightElement = $('<p>' + 'weight : ' + item.weight + '</p>');
         // creating element for type in modal
-        let typesElement = $("<p>" + "types : " + item.types + "</p>");
+        let typesElement = $('<p>' + 'types : ' + item.types + '</p>');
         // creating element for abilities in modal
         let abilitiesElement = $(
-            "<p>" + "abilities : " + item.abilities + "</p>"
+            '<p>' + 'abilities : ' + item.abilities + '</p>'
         );
 
         modalTitle.append(nameElement);

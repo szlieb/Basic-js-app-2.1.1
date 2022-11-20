@@ -12,5 +12,8 @@ CSS
 Java Script
 Bootstrap
 The open-source Pokeman API can be found here: https://pokeapi.co
+Jquery
+Eslint
+Polyfills
 
 
