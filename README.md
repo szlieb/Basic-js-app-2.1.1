@@ -14,7 +14,7 @@ Bootstrap
 The open-source Pokeman API can be found here: https://pokeapi.co
 Jquery
 Eslint
-Promiss olyfills
-Fetch
+Promiss polyfills
+Fetch polyfilss
 
 
